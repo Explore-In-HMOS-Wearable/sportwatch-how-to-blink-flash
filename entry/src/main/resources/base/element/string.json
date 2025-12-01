@@ -1,0 +1,17 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "FlashBlink module"
+    }
+  ,{
+      "name": "MainAbility_desc",
+      "value": "description"
+    },{
+      "name": "MainAbility_label",
+      "value": "FlashBlink"
+    },{
+      "name": "battery_label",
+      "value": "Battery: "
+    }]
+}

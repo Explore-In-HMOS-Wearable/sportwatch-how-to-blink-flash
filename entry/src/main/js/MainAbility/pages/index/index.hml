@@ -1,0 +1,10 @@
+<div class="container" id="container" style="background-color: {{  bgColor }};" >
+
+    <text class="mode-text" style="color: {{  textColor }};" id="modeText">{{  displayText }}</text>
+
+    <input type="button" style=" width: 50%; margin: 12px 0px; background-color: slateblue; padding: 4px 12px; border-radius: 8px;"  class="input" @click="changeMode">{{  $t('strings.button_title') }} </input>
+
+    <text class="batteryText" id="batteryText">
+         {{  $t('strings.battery_label') }}   {{  batteryLevel }}
+    </text>
+</div>

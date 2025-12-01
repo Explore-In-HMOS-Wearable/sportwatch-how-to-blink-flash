@@ -1,0 +1,12 @@
+{
+  "strings": {
+    "hello": "Hello",
+    "world": "World",
+    "battery_label": "Battery: ",
+    "button_title": "CHANGE",
+    "text_white": "WHITE FLASHLIGHT",
+    "text_red": "RED FLASHLIGHT",
+    "text_sos": "SOS",
+    "tap_to_start": "TAP TO START"
+  }
+}
