@@ -4,7 +4,8 @@ import Brightness from '@system.brightness';
 export default {
     data: {
         currentMode: 'OFF',
-        batteryLevel: 100,
+        batteryLevelText: '-',
+        batteryLevel: 0,
         sosTimer: null,
         sosIndex: 0,
         brightness: 0,
@@ -15,7 +16,7 @@ export default {
     onInit() {
         this.setBrightnessMax()
         this.updateDisplay();
-        this.batteryLevel();
+        this.batteryLevelFetch();
     },
 
     onDestroy() {
@@ -26,15 +27,16 @@ export default {
         Brightness.setValue({value: 255})
     },
 
-    batteryLevel() {
-        let level = 0;
+    batteryLevelFetch() {
+        let tmpBattery = 0
+        Battery.getStatus({
+            success: function (data) {
+                const pct = Math.round((data.level || 0) * 100) ;
+                tmpBattery = pct
+            }
+        });
 
-
-        Battery.batteryLevel(function (levelText) {
-            level = levelText;
-        })
-
-        this.batteryLevel = level;
+        this.batteryLevel =  tmpBattery
     },
 
     // Handle screen tap
@@ -105,10 +107,9 @@ export default {
                 displayText = this.$t('strings.tap_to_start');
                 break;
         }
-
         this.bgColor = bgColor;
         this.textColor = textColor;
         this.displayText = displayText;
-        this.batteryLevel.text = this.$t('strings.battery_label') + this.batteryLevel + '%';
+        this.batteryLevelText = this.batteryLevel
     }
 };

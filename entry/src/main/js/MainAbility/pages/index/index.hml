@@ -5,6 +5,6 @@
     <input type="button" style=" width: 50%; margin: 12px 0px; background-color: slateblue; padding: 4px 12px; border-radius: 8px;"  class="input" @click="changeMode">{{  $t('strings.button_title') }} </input>
 
     <text class="batteryText" id="batteryText">
-         {{  $t('strings.battery_label') }}   {{  batteryLevel }}
+          {{  batteryLevelText }}
     </text>
 </div>

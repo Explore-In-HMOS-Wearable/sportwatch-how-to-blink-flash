@@ -10,6 +10,7 @@ App for generating flashlight and flashblink from watch
   <img src="screenshots/ss_1.png" width="24%">
   <img src="screenshots/ss_2.png" width="24%">
   <img src="screenshots/ss_3.png" width="24%">
+
 </div> 
 
 # Use Cases
